@@ -1,9 +1,9 @@
 package infoblox
 
 import (
+	"github.com/CARFAX/skyinfoblox"
 	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/hashicorp/terraform/terraform"
-	"github.com/sky-uk/skyinfoblox"
 	"time"
 )
 

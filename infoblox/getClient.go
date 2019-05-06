@@ -1,7 +1,7 @@
 package infoblox
 
 import (
-	"github.com/sky-uk/skyinfoblox"
+	"github.com/CARFAX/skyinfoblox"
 	"os"
 )
 

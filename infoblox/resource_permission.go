@@ -2,8 +2,8 @@ package infoblox
 
 import (
 	"fmt"
+	"github.com/CARFAX/skyinfoblox/api/common/v261/model"
 	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/sky-uk/skyinfoblox/api/common/v261/model"
 	"regexp"
 )
 

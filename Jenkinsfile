@@ -1,7 +1,7 @@
 #!groovy
 
 project_name = 'terraform-provider-infoblox'
-project_owner = 'sky-uk'
+project_owner = 'carfax'
 
 project_src_path = "github.com/${project_owner}/${project_name}"
 github_token_id = 'svc-paas-github-access-token-as-text'

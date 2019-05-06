@@ -6,8 +6,8 @@ import (
 	"github.com/hashicorp/terraform/helper/acctest"
 	"github.com/hashicorp/terraform/helper/resource"
 	"github.com/hashicorp/terraform/terraform"
-	"github.com/sky-uk/skyinfoblox"
-	"github.com/sky-uk/skyinfoblox/api/nsgroupfwd"
+	"github.com/CARFAX/skyinfoblox"
+	"github.com/CARFAX/skyinfoblox/api/nsgroupfwd"
 	"regexp"
 	"testing"
 )
