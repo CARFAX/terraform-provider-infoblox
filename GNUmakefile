@@ -4,7 +4,10 @@ COVER_TEST?=$$(go list ./... |grep -v 'vendor')
 
 default: build
 
-build: fmtcheck
+dep:
+	dep ensure
+
+build: dep fmtcheck
 	go install
 
 test: fmtcheck
@@ -55,4 +58,4 @@ test-compile: fmtcheck
 	fi
 	go test -c $(TEST) $(TESTARGS)
 
-.PHONY: build test testacc testrace cover vet fmt fmtcheck errcheck vendor-status test-compile
+.PHONY: dep build test testacc testrace cover vet fmt fmtcheck errcheck vendor-status test-compile

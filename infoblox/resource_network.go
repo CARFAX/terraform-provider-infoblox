@@ -120,7 +120,7 @@ func resourceNetwork() *schema.Resource {
 			"extattrs": {
 				Type:        schema.TypeMap,
 				Optional:    true,
-				Description: "Map of attributes to be sent as extra attributes",
+				Description: "Map of attributes to be sent as extra attributes.",
 			},
 			"lease_scavenge_time": {
 				Type:        schema.TypeInt,
