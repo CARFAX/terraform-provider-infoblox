@@ -1,17 +1,24 @@
 TEST?=$$(go list ./... |grep -v 'vendor')
 GOFMT_FILES?=$$(find . -name '*.go' |grep -v vendor)
 COVER_TEST?=$$(go list ./... |grep -v 'vendor')
+VERSION?=$$(cat VERSION)
 
-default: build
+default: all
+
+all: fmt dep build install
 
 dep:
 	dep ensure
 
-build: dep fmtcheck
-	go install
+build: fmtcheck
+	env GOOS=darwin GOARCH=amd64 go build -o bin/darwin_amd64/terraform-provider-infoblox_v${VERSION}
+	env GOOS=linux GOARCH=amd64 go build -o bin/linux_amd64/terraform-provider-infoblox_v${VERSION}
+	zip bin/terraform-provider-infoblox_v${VERSION}_darwin_amd64.zip bin/darwin_amd64/terraform-provider-infoblox_v${VERSION}
+	zip bin/terraform-provider-infoblox_v${VERSION}_linux_amd64.zip bin/linux_amd64/terraform-provider-infoblox_v${VERSION}
 
 install:
-	cp ${GOPATH}/bin/terraform-provider-infoblox ~/.terraform.d/plugins/terraform-provider-infoblox_v1.0.1
+	mkdir -p ~/.terraform.d/plugins/
+	cp -rp bin/* ~/.terraform.d/plugins/
 
 test: fmtcheck
 	go test -i $(TEST) || exit 1

@@ -4,7 +4,8 @@
 example.tf
 terraform.tfplan
 terraform.tfstate
-bin/
+## Going to start distributing from here... 
+#bin/
 modules-dev/
 /pkg/
 website/.vagrant
