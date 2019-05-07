@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/carfax/terraform-provider-infoblox/infoblox"
 	"github.com/hashicorp/terraform/plugin"
-	"github.com/sky-uk/terraform-provider-infoblox/infoblox"
 )
 
 func main() {

@@ -3,10 +3,10 @@ package infoblox
 import (
 	"fmt"
 	"github.com/CARFAX/skyinfoblox/api/common/v261/model"
+	"github.com/carfax/terraform-provider-infoblox/infoblox/util"
 	"github.com/hashicorp/terraform/helper/acctest"
 	"github.com/hashicorp/terraform/helper/resource"
 	"github.com/hashicorp/terraform/terraform"
-	"github.com/sky-uk/terraform-provider-infoblox/infoblox/util"
 	"regexp"
 	"testing"
 )

@@ -2,8 +2,8 @@ package infoblox
 
 import (
 	"github.com/CARFAX/skyinfoblox/api/common/v261/model"
+	"github.com/carfax/terraform-provider-infoblox/infoblox/util"
 	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/sky-uk/terraform-provider-infoblox/infoblox/util"
 )
 
 func resourceNetwork() *schema.Resource {
@@ -117,11 +117,6 @@ func resourceNetwork() *schema.Resource {
 				Computed:    true,
 				Description: "The IPv4 Address of the network.",
 			},
-			"extattrs": {
-				Type:        schema.TypeMap,
-				Optional:    true,
-				Description: "Map of attributes to be sent as extra attributes.",
-			},
 			"lease_scavenge_time": {
 				Type:        schema.TypeInt,
 				Optional:    true,
@@ -163,6 +158,11 @@ func resourceNetwork() *schema.Resource {
 				Optional:    true,
 				Computed:    true,
 				Description: "The network container to which this network belongs (if any). Cannot be updated nor written",
+			},
+			"extattrs": {
+				Type:        schema.TypeMap,
+				Optional:    true,
+				Description: "Map of attributes to be sent as extra attributes.",
 			},
 			"options": &schema.Schema{
 				Type:        schema.TypeSet,

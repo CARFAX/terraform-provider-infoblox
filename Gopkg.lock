@@ -484,27 +484,15 @@
   version = "0.0.11"
 
 [[projects]]
-  digest = "1:bbe449b84f2af2d026af105befe4e69f539595d99932701e689e80be5abfd210"
+  digest = "1:1b7cf29271aeb5c9f81b5d6c72ae2545e80294bc67e8c66f95a1bf8a5c898ab2"
   name = "github.com/sky-uk/skyinfoblox"
   packages = [
-    ".",
     "api/common",
     "api/common/v261/model",
   ]
   pruneopts = "UT"
   revision = "333b13f5e1a3744256f05ce192913c1144575827"
   version = "0.2.4"
-
-[[projects]]
-  digest = "1:e53809898128d4b9f2cd2b668b4b65e2292363cf7268cd7bf087ac699348b8fa"
-  name = "github.com/sky-uk/terraform-provider-infoblox"
-  packages = [
-    "infoblox",
-    "infoblox/util",
-  ]
-  pruneopts = "UT"
-  revision = "83f446ed9e90e7997b963ce10b914be715d72e81"
-  version = "0.1.11"
 
 [[projects]]
   digest = "1:2643d81498e38e44bdcf480be199cac55f29e97403b0342d962824bfe9960722"
@@ -760,8 +748,6 @@
     "github.com/hashicorp/terraform/helper/schema",
     "github.com/hashicorp/terraform/plugin",
     "github.com/hashicorp/terraform/terraform",
-    "github.com/sky-uk/terraform-provider-infoblox/infoblox",
-    "github.com/sky-uk/terraform-provider-infoblox/infoblox/util",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

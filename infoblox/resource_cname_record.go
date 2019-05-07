@@ -2,8 +2,8 @@ package infoblox
 
 import (
 	"github.com/CARFAX/skyinfoblox/api/common/v261/model"
+	"github.com/carfax/terraform-provider-infoblox/infoblox/util"
 	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/sky-uk/terraform-provider-infoblox/infoblox/util"
 )
 
 func resourceCNAMERecord() *schema.Resource {

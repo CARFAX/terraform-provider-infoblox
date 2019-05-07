@@ -10,6 +10,9 @@ dep:
 build: dep fmtcheck
 	go install
 
+install:
+	cp ${GOPATH}/bin/terraform-provider-infoblox ~/.terraform.d/plugins/terraform-provider-infoblox_v1.0.1
+
 test: fmtcheck
 	go test -i $(TEST) || exit 1
 	echo $(TEST) | \
